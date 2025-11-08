@@ -1,0 +1,63 @@
+.user-list__pagination-btn {
+    width: 40px;
+    height: 40px;
+    background-color: cornflowerblue;
+
+    color: white;
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    svg {
+      font-size: 28px;
+    }
+  }
+.user-card__edit-btn {
+    background: #2563eb;
+    color: white;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: #1d4ed8;
+    }
+  }
+
+.user-list__create{
+  margin-right: 10px;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  &:hover {
+      transform: translateY(-2px);
+    }
+}
+.refactor-buttons__btn{
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  &:hover {
+      transform: translateY(-2px);
+    }
+}
