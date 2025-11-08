@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { IPeopleProps } from "../types/PeopleDataTypes";
 
-// Базовый URL
 const BASE_URL = import.meta.env.PROD
   ? "https://690cee65a6d92d83e84ffc5a.mockapi.io"
   : "/api";
