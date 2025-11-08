@@ -9,7 +9,7 @@ export const fetchUsers = createAsyncThunk(
     );
     if(!res.ok)return rejectWithValue(await res.text());
     const data = (await res.json()) as IPeopleProps[];
-    const totalRes = await fetch("/api/user")
+    const totalRes = await fetch("https://690cee65a6d92d83e84ffc5a.mockapi.io/user")
     if(!totalRes.ok)return rejectWithValue(await res.text());
     const totalUsers = (await totalRes.json()).length
     
@@ -20,7 +20,7 @@ export const fetchUsers = createAsyncThunk(
 export const createUser = createAsyncThunk(
   "users/createUser",
   async (data: Partial<IPeopleProps>, { rejectWithValue }) => {
-    const res = await fetch("/api/user", {
+    const res = await fetch("https://690cee65a6d92d83e84ffc5a.mockapi.io/user", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -37,7 +37,7 @@ export const createUser = createAsyncThunk(
 export const editUser = createAsyncThunk(
   "users/editUser",
   async ({ id, data, }: { id: string; data: Partial<IPeopleProps> }, {rejectWithValue}) => {
-    const res = await fetch(`/api/user/${id}`, {
+    const res = await fetch(`https://690cee65a6d92d83e84ffc5a.mockapi.io/user/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
