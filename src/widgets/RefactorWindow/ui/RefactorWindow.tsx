@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState, AppDispatch } from '../../../App/providers/StoreProvider/index';
-import { createUser, editUser } from '../../../App/providers/StoreProvider/index';
+import { createUser, editUser, fetchUsers } from '../../../App/providers/StoreProvider/index';
 import Button from '../../../shared/Button/index';
 import type { IPeopleProps } from '../../../App/providers/StoreProvider/index';
 import './RefactorWindow.scss';
@@ -12,7 +12,7 @@ export default function RefactorWindow() {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
 
-  const { pages } = useSelector((state: RootState) => state.users);
+  const { pages, page, limit } = useSelector((state: RootState) => state.users);
 
   const user = Object.values(pages ?? {})
     .flat()
@@ -51,6 +51,7 @@ export default function RefactorWindow() {
           avatar: `https://i.pravatar.cc/150?u=${Date.now()}`
         })
       );
+      await dispatch(fetchUsers({ page, limit }))
     }
 
     navigate('/');
