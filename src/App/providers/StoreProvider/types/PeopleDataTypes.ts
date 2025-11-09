@@ -1,10 +1,10 @@
 export interface IPeopleProps{
-  id: string
+  id?: string
   name: string
   email: string
   avatar: string
   description: string
-  createdAt: string
+  createdAt?: string
   onClick?: (id:string)=>void
 }
 export interface PeopleState {

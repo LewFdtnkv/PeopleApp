@@ -22,7 +22,7 @@ export default function RefactorWindow() {
     name: '',
     email: '',
     description: '',
-    avatar: ''
+    avatar: '',
   });
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function RefactorWindow() {
         name: user.name,
         email: user.email,
         description: user.description,
-        avatar: user.avatar
+        avatar: user.avatar,
       });
     }
   }, [user]);
@@ -42,8 +42,9 @@ export default function RefactorWindow() {
   };
 
   const handleSave = async () => {
-    if (user) {
-      await dispatch(editUser({ id: user.id, data: form }));
+    if (user && user.id) {
+      await dispatch(editUser({id: user.id, 
+  data: form }));
     } else {
       await dispatch(
         createUser({

@@ -44,12 +44,12 @@ export const createUser = createAsyncThunk(
 
 export const editUser = createAsyncThunk(
   "users/editUser",
-  async ({ id, data }: { id: string; data: Partial<IPeopleProps> }, { rejectWithValue }) => {
+  async ({ id, data }: { id: string; data: IPeopleProps }, { rejectWithValue }) => {
     try {
       const res = await fetch(`${BASE_URL}/user/${id}`, {
-        method: "PATCH",
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data), 
       });
 
       if (!res.ok) return rejectWithValue(await res.text());
@@ -59,3 +59,4 @@ export const editUser = createAsyncThunk(
     }
   }
 );
+
