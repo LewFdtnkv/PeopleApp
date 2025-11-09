@@ -69,13 +69,13 @@ export const peopleSlice = createSlice({
         state.error = "Ошибка создания пользователей";
       })
       .addCase(createUser.fulfilled, (state, action) => {
-        const newUser = action.payload;
+        // const newUser = action.payload;
 
-        if (!state.pages[state.page]) {
-          state.pages[state.page] = [];
-        }
+        // if (!state.pages[state.page]) {
+        //   state.pages[state.page] = [];
+        // }
 
-        state.pages[state.page].push(newUser);
+        // state.pages[state.page].push(newUser);
 
         state.totalUsers += 1;
       }) 
