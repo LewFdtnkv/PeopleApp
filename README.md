@@ -1,79 +1,73 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+PeopleApp — это современное веб-приложение для управления списком людей, выполненное на базе React + TypeScript и организованное по архитектуре FSD (Feature-Sliced Design).
+Проект демонстрирует грамотное разделение логики, масштабируемость и удобство развития кода.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение позволяет добавлять, редактировать и удалять людей, а также хранить данные между сессиями благодаря Redux Toolkit и Redux-Persist, что делает работу стабильной и предсказуемой.
 
-Currently, two official plugins are available:
+Стилизация выполнена через SCSS, что обеспечивает гибкость, модульность и чистоту стилей.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Что позволяет PeopleApp:
 
-## React Compiler
+📌 Вести список людей в структурированном виде
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✏️ Добавлять, редактировать и удалять записи
 
-## Expanding the ESLint configuration
+🔍 Быстро искать нужного человека
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📱 Работать на любом устройстве благодаря адаптивному интерфейсу
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+⚡ Работать быстро и плавно — благодаря React + Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🧹 Поддерживать чистую структуру проекта благодаря TypeScript
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Ключевые особенности
+
+FSD-архитектура — удобное и масштабируемое разделение проекта на feature-модули
+
+Redux Toolkit — управление состоянием по современным best-practices
+
+Redux-Persist — надёжное сохранение данных в localStorage, даже при перезагрузке страницы
+
+SCSS-стили — модульная и структурированная стилизация интерфейса
+
+TypeScript — строгость типов и предсказуемость поведения
+
+Vite — сверхбыстрая сборка и запуск проекта
+
+### 👉 Главная страница
+Интерфейс отображает пользователей в виде карточек с аватаром, именем, email и датой создания.  
+Также доступно быстрое редактирование.
+![Главная страница](src/assets/png/template1.png)
+## 🔍 Функционал интерфейса
+
+- ✅ Элегантные карточки пользователей  
+- ✅ Поддержка реальных аватаров и авто-генерируемых аватаров  
+- ✅ Кнопка создания нового пользователя  
+- ✅ Удобная кнопка редактирования прямо на карточке  
+- ✅ Адаптивный интерфейс — корректно отображается на любых устройствах  
+- ✅ Структурированный Header и Footer  
+
+### 👉 Страница реадтирования 
+
+![Окно редактирования и создания нового пользователя](src/assets/png/template2.png)
+
+## 🔍 Функционал интерфейса
+- ✅ Изменение имени и фамилии  
+- ✅ Редактирование email  
+- ✅ Загрузка или обновление аватара  
+- ✅ Автоматическая валидация данных  
+- ✅ Кнопка сохранения с мгновенным обновлением UI  
+
+## 🚀 Установка и запуск
+```bash
+# Клонируем репозиторий
+git clone https://github.com/LewFdtnkv/PeopleApp.git
+
+# Переходим в папку проекта
+cd PeopleApp
+
+# Устанавливаем зависимости
+npm install
+
+# Запускаем проект
+npm run dev
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# People-landing
-=======
-# People-landing
->>>>>>> 0fd1eed6861257adb98a9ef73cccd99d3ae92210
-# PeopleLanding
